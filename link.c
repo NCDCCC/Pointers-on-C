@@ -74,7 +74,7 @@ int sll_remove(Node **rootp,Node *node)//12.8.5
 	return 0;
 }
 
-Node *search_list(Node *node,void const *value,int(*compare)(void const *,void const *))
+Node *search_list(Node *node,void const *value,int(*compare)(void const *,void const *))//13 pointer_function
 {
 	while (node != NULL)
 	{
