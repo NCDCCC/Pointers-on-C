@@ -1,11 +1,35 @@
+#include <assert.h>
+
 #define STACK_TYPE int
+#define STACK_SIZE 100
 
-void push(STACK_TYPE value);
+static STACK_TYPE stack[STACK_SIZE];
+static int        top_element = 1;
 
-void pop(void);
+void push(STACK_TYPE value)
+{
+	assert(!is_full());
+	stack[++top_element] = value;
+}
 
-STACK_TYPE top(void);
+STACK_TYPE pop(void)
+{
+	assert(!is_empty());
+	return stack[top_element--];
+}
 
-int is_empty(void);
+STACK_TYPE top(void)
+{
+	assert(!is_empty());
+	return stack[top_element];
+}
 
-int is_full(void);
+int is_empty(void)
+{
+	return top_element == -1;
+}
+
+int is_full(void)
+{
+	return top_element == STACK_SIZE - 1;
+}
