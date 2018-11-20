@@ -3,8 +3,8 @@
 #define STACK_TYPE int
 #define STACK_SIZE 100
 
-static STACK_TYPE stack[STACK_SIZE];
-static int        top_element = 1;
+static    STACK_TYPE stack[STACK_SIZE];
+static    int        top_element = 1;
 
 void push(STACK_TYPE value)
 {

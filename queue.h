@@ -12,7 +12,7 @@ static    size_t       rear = 0;
 void insert(QUEUE_TYPE value)
 {
 	assert(!is_full());
-	rear = (rear + 1) % ARRAY_SIZE;//loop
+	rear = (rear + 1) % ARRAY_SIZE;//loop queue
 	queue[rear] = value;
 }
 
